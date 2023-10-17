@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Search Page</title>
+		<!--		-->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<!--  -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+		<!--		-->
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular,bold">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="../../utils/header.css">
+		<!--		-->
+		<link rel="stylesheet" type="text/css" href="https://unpkg.com/slick-loader@1.1.20/slick-loader.min.css">
+		<script src="https://unpkg.com/slick-loader@1.1.20/slick-loader.min.js"></script>
+		<!--		-->
+		<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+		<!--		-->
+		<script type="text/javascript" src="../../utils/utils.js"></script>
+	</head>
+
+	<body>
+		<div class="header">
+			<a href="" class="logo" style="padding: 0px; margin-left: 25px">
+				<img src="../../assets/route66.png" width="64" height="64">
+			</a>
+			<div class="header-right">
+				<a class="active" href="../search">Rent</a>
+				<a href="../reservations">Reservations</a>
+				<a href="../about">About</a>
+			</div>
+		</div>
+		<section class="forms-section">
+			<div class="forms">
+				<div class="form-wrapper is-active">
+					<form class="form form-search" id="search-form">
+						<fieldset>
+							<div class="input-block" style="display:flex;">
+								<div>
+									<label for="search-start-date">Start Date</label>
+									<input onchange="adjustDatesLimits()" id="search-start-date" type="date">
+								</div>
+								<div style="margin-left: 10px">
+									<label for="search-end-date">End Date</label>
+									<input onchange="adjustDatesLimits()" id="search-end-date" type="date">
+								</div>
+							</div>
+							<div class="input-block" style="display:flex;">
+								<div>
+									<label for="search-country">Country</label>
+									<select id="search-country"></select>
+								</div>
+								<div style="margin-left: 15px">
+									<label for="search-city">City</label>
+									<select id="search-city" disabled>
+										<option value="none">Select country first</option>
+									</select>
+								</div>
+							</div>
+						</fieldset>
+						<button id="search-submit" type="submit" class="btn-search">Submit</button>
+					</form>
+				</div>
+			</div>
+		</section>
+	</body>
+	<script type="text/javascript" src="script.js"></script>
+</html>

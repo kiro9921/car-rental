@@ -1,0 +1,108 @@
+<html id="content" lang="us">
+<head>
+    <meta charset="utf-8">
+    <title>Login Page</title>
+    <!--		-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.2.0/zxcvbn.js"></script>
+    <!--		-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+    <!--		-->
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular,bold">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../../utils/header.css">
+    <!--		-->
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/slick-loader@1.1.20/slick-loader.min.css">
+    <script src="https://unpkg.com/slick-loader@1.1.20/slick-loader.min.js"></script>
+    <!--		-->
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+    <!--		-->
+    <script type="text/javascript" src="../../utils/utils.js"></script>
+</head>
+<body>
+<section class="forms-section">
+    <h1 class="title">Welcome to Route 66</h1>
+    <div class="forms">
+        <div class="form-wrapper is-active">
+            <button type="button" class="switcher switcher-login">
+                LOGIN
+                <span class="underline"></span>
+            </button>
+            <form class="form form-login" id="login-form">
+                <fieldset>
+                    <div class="input-block">
+                        <label for="login-email">E-mail</label>
+                        <input id="login-email">
+                    </div>
+                    <div class="input-block">
+                        <label for="login-password">Password</label>
+                        <input id="login-password" type="password">
+                    </div>
+                </fieldset>
+                <button type="submit" class="btn-login">Login</button>
+            </form>
+        </div>
+        <div class="form-wrapper">
+            <button type="button" class="switcher switcher-signup">
+                SIGN UP
+                <span class="underline"></span>
+            </button>
+            <form class="form form-signup" id="signup-form">
+                <fieldset>
+                    <div class="input-block">
+                        <label for="signup-email">E-mail</label>
+                        <input id="signup-email" onkeyup="validateRegisterInputs()">
+                    </div>
+                    <div class="input-block" style="display:flex;">
+                        <div>
+                            <label for="signup-first-name">First Name</label>
+                            <input id="signup-first-name" type="text" onkeyup="validateRegisterInputs()">
+                        </div>
+                        <div style="margin-left: 10px">
+                            <label for="signup-last-name">Last Name</label>
+                            <input id="signup-last-name" type="text" onkeyup="validateRegisterInputs()">
+                        </div>
+                    </div>
+                    <div class="input-block" style="display:flex;">
+                        <div>
+                            <label for="signup-phone">Phone number</label>
+                            <input id="signup-phone" onkeyup="validateRegisterInputs()">
+                        </div>
+                        <div style="margin-left: 10px">
+                            <label for="signup-national-id">National ID</label>
+                            <input id="signup-national-id" onkeyup="validateRegisterInputs()">
+                        </div>
+                    </div>
+                    <div class="input-block">
+                        <label for="signup-birthdate">Birthdate</label>
+                        <input type="date" id="signup-birthdate">
+                    </div>
+                    <div class="input-block">
+                        <label for="signup-password">Password</label>
+                        <input id="signup-password" type="password" onkeyup="validateRegisterInputs()">
+                        <div class="indicator">
+                            <span class="weak"></span>
+                            <span class="medium"></span>
+                            <span class="strong"></span>
+                        </div>
+                        <div class="password-strength-text" id="password-strength" style="white-space: initial;"></div>
+                    </div>
+                    <br/>
+                    <div class="input-block">
+                        <label for="signup-password-confirm">Confirm Password</label>
+                        <input id="signup-password-confirm" onkeyup="validateRegisterInputs()" type="password">
+                        <br/>
+                        <div class="password-match-text" id="password-match"></div>
+                    </div>
+                </fieldset>
+                <button id="signup-submit" type="submit" class="btn-signup">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</section>
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>

@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Reservations Page</title>
+		<!--		-->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<!--  -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+		<!--  -->
+		<script src="//cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"></script>
+		<script src="//cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+		<!--		-->
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular,bold">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="../../utils/header.css">
+		<!--		-->
+		<link rel="stylesheet" type="text/css" href="https://unpkg.com/slick-loader@1.1.20/slick-loader.min.css">
+		<script src="https://unpkg.com/slick-loader@1.1.20/slick-loader.min.js"></script>
+		<!--		-->
+		<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+		<!--		-->
+		<script type="text/javascript" src="../../utils/utils.js"></script>
+	</head>
+
+	<br>
+	<div class="header">
+		<a href="" class="logo" style="padding: 0px; margin-left: 25px">
+			<img src="../../assets/route66.png" width="64" height="64">
+		</a>
+		<div class="header-right">
+			<a class="active" href="../users">Users</a>
+			<a href="../offices">Offices</a>
+			<a href="../cars">Cars</a>
+			<a href="../reservations">Reservations</a>
+			<a href="../payments">Payments</a>
+			<a href="../about">About</a>
+		</div>
+	</div>
+	<div class="table-wrap">
+		<h1>Users</h1>
+		<table id="usersTable" class="display">
+			<thead>
+			<tr>
+				<th>Email</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>National ID</th>
+				<th>Phone</th>
+				<th>Birthdate</th>
+				<th>Reservations</th>
+				<th>Due</th>
+				<th>Paid</th>
+				<th>Admin</th>
+			</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+	<br>
+	</body>
+	<script type="text/javascript" src="script.js"></script>
+</html>
